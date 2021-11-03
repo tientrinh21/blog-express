@@ -2,7 +2,7 @@
 
 The blog is build with Express, MogoDB
 
-Usage
+## Usage
 ```
 git clone <this repo>
 
