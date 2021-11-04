@@ -28,17 +28,18 @@ const logoutController = require('./controllers/logout')
 // mongoose.connect('mongodb://localhost/my_database', { useNewUrlParser: true })
 
 // Test Mongo Atlas
-// mongoose.connect('mongodb+srv://tientrinh:iamcute21@kakaofriends-diary.yppj6.mongodb.net/test', {
+// mongoose.connect('mongodb+srv://<user>:<password>@kakaofriends-diary.yppj6.mongodb.net/test', {
 // 	useNewUrlParser: true,
 // })
 
 // Public Mongo Atlas
-mongoose.connect(
-	'mongodb+srv://tientrinh:iamcute21@kakaofriends-diary.yppj6.mongodb.net/my_database',
-	{
-		useNewUrlParser: true,
-	}
-)
+// mongoose.connect(
+// 	'mongodb+srv://<user>:<password>@kakaofriends-diary.yppj6.mongodb.net/my_database',
+// 	{
+// 		useNewUrlParser: true,
+// 	}
+// )
+// ==> DO NOT PUT IN THE INDEX FILE BECAUSE IT WILL BE EXPOSED ON GITHUB
 
 app.set('view engine', 'ejs')
 
