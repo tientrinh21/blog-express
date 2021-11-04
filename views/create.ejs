@@ -35,19 +35,25 @@
 									<label for="name">Title</label>
 								</div>
 								<div class="form-floating">
-									<textarea
-										class="form-control"
-										id="body"
-										name="body"
-										placeholder="Description"
-										style="height: 7rem"
-									></textarea>
+									<textarea class="form-control" id="body" name="body"></textarea>
+									<script>
+										$('#body').summernote({
+											placeholder: 'Description',
+											tabsize: 2,
+											height: 300,
+										})
+									</script>
 									<label for="body">Description</label>
 								</div>
-								<div class="form-floating">
+								<div class="form-floating mt-3">
 									<div class="form-group floating-label-form-group controls">
-										<label>Image</label>
-										<input type="file" class="form-control" id="image" name="image" />
+										<label for="image">Image</label>
+										<input
+											type="file"
+											class="form-control btn btn-sm mt-2 border"
+											id="image"
+											name="image"
+										/>
 									</div>
 								</div>
 								<br />

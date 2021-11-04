@@ -3,7 +3,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 const app = new express()
-const ejs = require('ejs') // !: Don't understand why
+// const ejs = require('ejs') // !: Don't understand why
 
 /* MIDDLEWARE */
 const fileUpload = require('express-fileupload')
