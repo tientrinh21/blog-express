@@ -42,7 +42,7 @@ const logoutController = require('./controllers/logout')
 // ==> DO NOT PUT IN THE INDEX.JS FILE BECAUSE IT WILL BE EXPOSED ON GITHUB
 
 // Temp user, valid for 6 hours
-mongoose.connect('mongodb+srv://coder:wxYLBvsJfu5kCmHT@kakaofriends-diary.yppj6.mongodb.net/test', {
+mongoose.connect('mongodb+srv://coder:Q9RoTBRXF1E4QfI6@kakaofriends-diary.yppj6.mongodb.net/test', {
 	useNewUrlParser: true,
 })
 
