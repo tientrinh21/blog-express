@@ -39,7 +39,12 @@ const logoutController = require('./controllers/logout')
 // 		useNewUrlParser: true,
 // 	}
 // )
-// ==> DO NOT PUT IN THE INDEX FILE BECAUSE IT WILL BE EXPOSED ON GITHUB
+// ==> DO NOT PUT IN THE INDEX.JS FILE BECAUSE IT WILL BE EXPOSED ON GITHUB
+
+// Temp user, valid for 6 hours
+mongoose.connect('mongodb+srv://coder:wxYLBvsJfu5kCmHT@kakaofriends-diary.yppj6.mongodb.net/test', {
+	useNewUrlParser: true,
+})
 
 app.set('view engine', 'ejs')
 
@@ -64,8 +69,18 @@ app.use('*', (req, res, next) => {
 	next()
 })
 
-app.listen(4000, () => {
-	console.log('App listening on port http://localhost:4000/')
+// Local host
+// app.listen(4000, () => {
+// 	console.log('App listening on port http://localhost:4000/')
+// })
+
+// Public on Heroku
+let port = process.env.PORT
+if (port == null || port == '') {
+	port = 4000
+}
+app.listen(port, () => {
+	console.log(`App listening on port: http://localhost:${port}`)
 })
 
 app.get('/', homeController)
