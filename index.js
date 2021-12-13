@@ -3,6 +3,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 const app = new express()
+const dotenv = require('dotenv') // Using environment variables to protect MongoDB data from exposed
 // const ejs = require('ejs') // !: Don't understand why
 
 /* MIDDLEWARE */
@@ -42,9 +43,17 @@ const logoutController = require('./controllers/logout')
 // ==> DO NOT PUT IN THE INDEX.JS FILE BECAUSE IT WILL BE EXPOSED ON GITHUB
 
 // Temp user, valid for 6 hours
-mongoose.connect('mongodb+srv://coder:Q9RoTBRXF1E4QfI6@kakaofriends-diary.yppj6.mongodb.net/test', {
-	useNewUrlParser: true,
-})
+// mongoose.connect('mongodb+srv://coder:Q9RoTBRXF1E4QfI6@kakaofriends-diary.yppj6.mongodb.net/test', {
+// 	useNewUrlParser: true,
+// })
+
+dotenv.config()
+const user = process.env.MONGO_USER
+const pw = process.env.MONGO_PASS
+mongoose.connect(
+	'mongodb+srv://' + user + ':' + pw + '@kakaofriends-diary.yppj6.mongodb.net/test',
+	{ useNewUrlParser: true }
+)
 
 app.set('view engine', 'ejs')
 
