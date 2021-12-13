@@ -1,5 +1,7 @@
 # Blog with Node + Express
 
+![hero](https://i.imgur.com/YQUDTCc.png)
+
 Site: https://still-fortress-41962.herokuapp.com/
 
 The blog is build with Express, MogoDB.
