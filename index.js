@@ -47,6 +47,7 @@ const logoutController = require('./controllers/logout')
 // 	useNewUrlParser: true,
 // })
 
+// Mongo Atlas (safe to push to Github)
 dotenv.config()
 const user = process.env.MONGO_USER
 const pw = process.env.MONGO_PASS
