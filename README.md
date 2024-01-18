@@ -1,10 +1,10 @@
-# Blog with Node + Express
+# Blog with MongoDB + Express
 
 ![hero](https://i.imgur.com/YQUDTCc.png)
 
 Site: https://still-fortress-41962.herokuapp.com/
 
-The blog is build with Express, MogoDB.
+The blog is build with Express, MongoDB.
 
 User can create the account, the password is hashed using 'bcrypt' package.
 
