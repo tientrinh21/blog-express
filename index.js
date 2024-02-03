@@ -92,7 +92,7 @@ if (port == null || port == '') {
 	port = 4000
 }
 app.listen(port, () => {
-	console.log(`App listening on port: http://localhost:${port}`)
+	console.log(`App listening on port: ${port}`)
 })
 
 app.get('/', homeController)
