@@ -2,7 +2,7 @@
 
 ![hero](https://i.imgur.com/YQUDTCc.png)
 
-Site: https://still-fortress-41962.herokuapp.com/
+Site: https://blog-express-xmph.onrender.com/
 
 The blog is build with Express, MongoDB.
 
@@ -12,9 +12,10 @@ Then user can login and start posting.
 
 ## Usage
 
-```
-git clone <this repo>
+Clone this report and add `MONGO_USER` and `MONGO_PASS` in `.env` file. You can change your port with `PORT` as well
+(default: 4000). Then run the following.
 
+```
 npm install
 npm start
 ```
