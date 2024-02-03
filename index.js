@@ -51,8 +51,10 @@ const logoutController = require('./controllers/logout')
 dotenv.config()
 const user = process.env.MONGO_USER
 const pw = process.env.MONGO_PASS
+
+mongoose.set('strictQuery', false)
 mongoose.connect(
-	'mongodb+srv://' + user + ':' + pw + '@kakaofriends-diary.yppj6.mongodb.net/test',
+	'mongodb+srv://' + user + ':' + pw + '@kakaofriends-diary.yppj6.mongodb.net/my_database',
 	{ useNewUrlParser: true }
 )
 
